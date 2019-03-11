@@ -13,7 +13,7 @@ def start(bot, update):
     """Send a message when the command /start is issued."""
     full_name = update.message.from_user.full_name
     message_start = (
-        f"Olá, {full_name}, bem-vindx ao bot da PotiLivre\n\n"
+        f"Boas vindas, {full_name}, ao bot da PotiLivre\n\n"
         "Comandos:\n\nRegras: /regras\nDescrição: /descricao \n\n"
         "Encontrou aleatoriamente esse bot? Então, visite o nosso site"
         "(https://potilivre.org/) e conheça a comunidade PotiLivre"
@@ -26,7 +26,8 @@ def help(bot, update):
     message_help = (
         "- Regras do grupo /regras\n"
         "- Está com dúvidas? Fale com nossos membros!\n"
-        "- Em caso de dúvidas mais específicas procure nossos Administradores."
+        "- Em caso de dúvidas mais específicas, como ajudar em eventos ou"
+        " levar a PotiLivre para sua região, procure nossos Administradores."
         )
     update.message.reply_text(message_help)
 
@@ -68,8 +69,8 @@ def description(bot, update):
     """Send a message with the group description."""
     message_description = (
         "PotiLivre é a Comunidade Potiguar de Software Livre, fundada em 2013."
-        " Somos uma organização independente, composta por voluntários, para"
-        " apoiar à filosofia e o uso do Software Livre."
+        " Somos uma organização independente, composta por voluntários,"
+        " para apoiar a filosofia e o uso do Software Livre."
         )
     update.message.reply_text(message_description)
 
