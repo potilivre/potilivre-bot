@@ -1,6 +1,6 @@
 # Contents
-1. [English](https://github.com/potilivre/potilivre-bot#Getting Started)
-2. [Portuguese](https://github.com/potilivre/potilivre-bot#Getting Started#Começando)
+- [English](https://github.com/potilivre/potilivre-bot#GettingStarted)
+- [Portuguese](https://github.com/potilivre/potilivre-bot#Começando)
 
 # PotiLivre Bot
 Telegram bot from the Free Software Potiguar community, PotiLivre.
@@ -46,7 +46,7 @@ python3 bot.py
 ## Contributing
 
 
-### Steps for Submitting Code
+### Steps for Submitting Code 
 
 1. Fork the repository on GitHub.
 2. Make your change.
