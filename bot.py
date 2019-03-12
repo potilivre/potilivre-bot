@@ -14,7 +14,8 @@ def start(bot, update):
     full_name = update.message.from_user.full_name
     message_start = (
         f"Boas vindas, {full_name}, ao bot da PotiLivre\n\n"
-        "Comandos:\n\nRegras: /regras\nDescrição: /descricao \n\n"
+        "Comandos:\n\nRegras: /regras\nDescrição: /descricao "
+        "\nAjuda: /ajuda\n\n"
         "Encontrou aleatoriamente esse bot? Então, visite o nosso site"
         "(https://potilivre.org/) e conheça a comunidade PotiLivre"
         )
