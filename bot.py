@@ -76,6 +76,18 @@ def description(bot, update):
     update.message.reply_text(message_description)
 
 
+def admins(bot, update):
+    """List all admins"""
+    adms = ''
+    for adm in bot.get_chat_administrators(update.message.chat_id):
+        username = adm.user.username
+        if not username:
+            username = "null"
+        else:
+            username = "→ @{}".format(username)
+            adms += f"<a href=\"tg://user?id={adm.user.id}\">{adm.user.first_name}</a> {username}\n"
+    update.message.reply_html(adms)
+
 def error(bot, update, error):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, error)
@@ -87,6 +99,7 @@ def main():
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("regras", rules))
+    dp.add_handler(CommandHandler("admins", admins))
     dp.add_handler(CommandHandler("descricao", description))
     dp.add_handler(CommandHandler("ajuda", help))
     dp.add_handler(MessageHandler(Filters.status_update.new_chat_members, welcome))
